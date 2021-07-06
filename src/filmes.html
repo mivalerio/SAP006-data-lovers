@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@100&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <header class="headerStudio">
-        <div class="headerTxt">
-          <a href="index.html" class="pagina-inicial">
-              <img class="logoImagem" src="img/pngkey.com-studio-ghibli-png-1987322.png">
-          </a>
-          <h1 class="titulo">
-            <u> スタジオジブリ作品 <br></u>
-              STUDIO GHIBLI
-          </h1>
-        </div>
-      </head>
+
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@100&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="headerStudio">
+    <div class="headerTxt">
+      <a href="index.html" class="pagina-inicial">
+        <img class="logoImagem" src="img/pngkey.com-studio-ghibli-png-1987322.png">
+      </a>
+      <h1 class="titulo">
+        <u> スタジオジブリ作品 <br></u>
+        STUDIO GHIBLI
+      </h1>
+    </div>
+    </head>
     <main>
-      
+
       <ul class="menu">
         <li><a href="sobre.html" class="itensMenu">Sobre</a></li>
         <li><a href="projeto.html" class="itensMenu">Projeto</a></li>
@@ -30,10 +32,22 @@
         <li><a href="duvidas.html" class="itensMenu">Dúvidas</a></li>
       </ul>
 
+      <ul class="menuFiltrar">
+
+        <form action=" " method="post">
+          <label for="busca">Buscar</label>
+          <input type="search" id="busca" name="busca" placeholder="Titulo do Filme">
+          <button type="submit">OK</button>
+        </form>
+        <h3>FILTRAR POR ANO DE LANÇAMENTO</h3>
+
+      </ul>
+
+      <div id="filmes" class="cards"></div>
       
     </main>
     <div id="root"></div>
     <script src="main.js" type="module"></script>
-  </body>
-</html>
+</body>
 
+</html>

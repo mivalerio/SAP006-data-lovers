@@ -49,3 +49,14 @@ body{
     text-decoration: none;
     font-size: 20pt;
 }
+
+.cards{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: center;
+    margin: 25px;
+}
+
+
