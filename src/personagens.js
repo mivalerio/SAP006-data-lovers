@@ -12,8 +12,4 @@ function showCardsCharacters(characters, film) {
     );
 }
  
-for(let film of filmes) { 
-    let characters = film.people; 
-    showCardsCharacters(characters); 
-    
-}
+
