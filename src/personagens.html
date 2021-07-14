@@ -19,22 +19,58 @@
               STUDIO GHIBLI
           </h1>
         </div>
-      </head>
+    </head>
     <main>
       
       <ul class="menu">
-        <li><a href="sobre.html" class="itensMenu">Sobre</a></li>
-        <li><a href="projeto.html" class="itensMenu">Projeto</a></li>
-        <li><a href="filmes.html" class="itensMenu">Filmes</a></li>
-        <li><a href="personagens.html" class="itensMenu">Personagens</a></li>
-        <li><a href="duvidas.html" class="itensMenu">Dúvidas</a></li>
+        <li><a href="sobre.html" id="sobre" class="itens-menu">Sobre</a></li>
+        <li><a href="projeto.html" id="projeto" class="itens-menu">Projeto</a></li>
+        <li><a href="filmes.html" id="filmes" class="itens-menu">Filmes</a></li>
+        <li><a href="personagens.html" id="personagens" class="itens-menu">Personagens</a></li>
+        <li><a href="duvidas.html" id="duvidas" class="itens-menu">Dúvidas</a></li>
+      </ul>
+      <br>
+      
+      <ul class="menu" >
+        <div class="select-options">
+          <p>Ordenar em ordem alfabética&ensp;</p>
+          <select name="alphabet-select" class="select" id="order">
+            <option value=""selected disabled>Selecione</option>
+            <option value="az" id="az">De A - Z</option>
+            <option value="za" id="za">De Z - A</option>
+          </select>
+          <p>Ordenar por idade &ensp;</p>
+          <select name="age-select"  class="select" id="age">
+            <option value=""selected disabled>Selecione</option>
+            <option value="older-to-younger">Do mais velho para o mais novo</option>
+            <option value="younger-to older">Do mais novo para o mais velho</option>
+          </select>
+          <p>Filtrar por gênero &ensp;</p>
+          <select name="gender-select"  class="select" id="gender">
+            <option value=""selected disabled>Selecione</option>
+            <option value="women">Mulher</option>
+            <option value="man">Homem</option>
+          </select>
+        </div>
       </ul>
 
-      <div id="pessoas" class="cards"></div>
+      <div id="card-characters" class="cards"></div>
       
     </main>
+    
+    <footer class="footer-inf">
+      <p class="name-footer">BootCamp Laboratória Projeto Data Lovers</p>
+      <div class="git-link">
+        <a href="https://github.com/jehkaori/SAP006-data-lovers">
+          <p class="name-footer">Jéssica&</p>
+        </a>
+        <a href="">
+          <p class="name-footer"> Michele</p>
+        </a>
+      </div>
+    </footer>
+
     <div id="root"></div>
-    <script src="personagens.js" type="module"></script>
+    <script src="./personagens.js" type="module"></script>
   </body>
 </html>
-

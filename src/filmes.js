@@ -15,12 +15,10 @@ function mostrarCards(data) {
                 <div class="titulo-filmes">${item.title}</div>
             </div> 
         </div>`
-
-
-
-    )
-}
-mostrarCards(filmes);
+ 
+    ).join("")
+} 
+mostrarCards(data.films); 
 
 
 
@@ -36,8 +34,8 @@ mostrarCards(filmes);
           <li>Clima:${item.climate}</li>
           <li>Terreno:${item.terrain}</li>
         </ul>
-    </div>
-    `)
+    </div>`
+    )
 }
 
 mostrarInformacoesCards(cardBack);*/

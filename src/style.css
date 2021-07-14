@@ -46,11 +46,9 @@ body{
 .cards{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
-    align-content: center;
-    margin: 25px;
-    margin-top: 100px;
+    margin: 100px;
     text-align: center;
     color: black;  
         
@@ -82,35 +80,62 @@ body{
     margin: auto;
     background-color: rgb(32, 139, 177);
 }
- 
-.itensMenu{
+
+.itens-menu{
     color: white;
     text-decoration: none;
     font-size: 20pt;
 }
- 
+
+.select-options{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.select{
+  
+   margin-right: 4%;
+}
+
 .filmes{
     display: flex;
     justify-content: space-around;
-    
 }
  
 .informacoes{
     width: 65vw;
 }
- 
 .modal{
     
     position: fixed;
-    
-    
+    visibility: hidden;
 }
 
- 
 .popup{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+
+.footer-inf{
+    background-color: rgba(127, 206, 60);
+    color: white;
+    
+}
+.git-link{
+    display: flex;
+    justify-content: center;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+.name-footer {
+    color: white;    
+    font-size: 15pt;
+    text-align: center;
 }
  
