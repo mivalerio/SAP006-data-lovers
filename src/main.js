@@ -1,6 +1,6 @@
-<<<<<<< HEAD
-//import { filtros } from './data.js';
 
+//import { filtros } from './data.js';
+/*
 import data from './data/ghibli/ghibli.js';
 //console.log(example, data);
 
@@ -36,8 +36,8 @@ for (let film of filmes){
     let characters = film.people;
     showCardsCharacters(characters);
 }
-mostrarCards(data.films);
-=======
+mostrarCards(data.films);*/
+
 //import { filtros } from './data.js'; 
 /*import data from './data/ghibli/ghibli.js';
 //console.log(example, data); 
@@ -56,10 +56,3 @@ function chamaCards (){
 }
 
 btnFilmes.addEventListener("click", chamaCards);*/
-
-
-
-
-
-
->>>>>>> 33e9145866cc9bbaebc8626319533b8a26c28371
