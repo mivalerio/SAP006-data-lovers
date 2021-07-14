@@ -43,10 +43,14 @@ export const ordenaAZ = (films) => {
   return ordenaNome;
 }
 
-// Filtrar Pokémons por nome através do input text
-export const filtraNome = (films) => {
-  const procuraPorNome = films.filter((filtraNome) =>
-    films.title.toLowerCase().startsWith(procuraPorNome));
+// Filtrar por nome através do input text
+export const filtraNome = (data,films) => {
+  
+  let procuraPorNome = data.filter((filtraNome =>
+    filtraNome.title.toLowerCase().includes(films.toLowerCase())
+    
+    ));
+    return procuraPorNome;
 };
 
 

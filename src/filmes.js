@@ -5,13 +5,14 @@ import { ordenaAZ } from './data.js';
 import { filtraNome } from './data.js';
 
 const filmes = data.films;
+const pesquisar = document.getElementById("busca");
 
 function mostrarCards(data) {
     document.getElementById('cards-filmes').innerHTML = data.map((item) => ` 
         <div class="filmes">
             <div class="img-poster"> 
                 <img src="${item.poster}"> 
-                <div class="titulo">${item.title}</div>
+                <div class="titulo-filmes">${item.title}</div>
             </div> 
         </div>`
 
@@ -23,7 +24,7 @@ mostrarCards(filmes);
 
 
 
-function mostrarInformacoesCards(data) {
+/*function mostrarInformacoesCards(data) {
     document.getElementById('cardsInformacoes').innerHTML = data.map((item) => `
     <div class="cardBack">
         <ul class="informacoes">
@@ -39,14 +40,8 @@ function mostrarInformacoesCards(data) {
     `)
 }
 
-// Filtrar Pokémons por nome atráves do input text e botão filtrar
-const btn_ok = document.getElementById("btn_ok");
+mostrarInformacoesCards(cardBack);*/
 
-btn_ok.addEventListener("click", () => {
-  const procuraPorNome = filtraNome(filmes);
-  mostrarCards(procuraPorNome);
-  limpaFiltros();
-});
 
 const selectElement = document.querySelector('.opcao');
 
@@ -56,12 +51,10 @@ selectElement.addEventListener('change', (event) => {
     const opcaoSelecionada = event.target.value;
     const result = document.querySelector('.cards-filmes');
 
-    console.log(opcaoSelecionada);
+    
     if (opcaoSelecionada == "release_date") {
         const filmesOrdenados = ordenarDatadeLancamento(filmes)
         console.log("Oi Deu Certo!");
-        // filmes.sort();
-        // console.log(filmes.sort());
 
         mostrarCards(filmesOrdenados);
 
@@ -73,8 +66,7 @@ selectElement.addEventListener('change', (event) => {
 
         mostrarCards(ordenaScoreMaior);
     }
-    //cardsFilmes.textContent = `${event.target.value}`;
-
+    
     if (opcaoSelecionada == "title") {
         const ordenaNome = ordenaAZ(filmes)
         console.log("Ordenou nome");
@@ -95,15 +87,25 @@ selectElement.addEventListener('change', (event) => {
 
 
 //Limpar filtros
-const limpaFiltros = () => {
+/*const limpaFiltros = () => {
     document.getElementById("title").value = "";
     document.getElementById("rt_score").value = "";
     document.getElementById("release_date").value = "";
     document.getElementById("busca").value= "";
     document.getElementById("producer").value= "";
     document.getElementById("director").value= "";
-    }
+    }*/
 
+    
+//filtrar pelo input
+
+function procurarNome(e) {
+    e.preventDefault();
+    mostrarCards(filtraNome(data.films, pesquisar.value));    
+    
+}
+
+pesquisar.addEventListener("keyup", procurarNome);
 
 
 
