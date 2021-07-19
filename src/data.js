@@ -63,7 +63,6 @@ let media = [];
 
 for (let i = 0; i < filmes.length; i++) {
 media.push(parseInt(filmes[i]["rt_score"]));
-
 }
   
 const mediaNotas = media.reduce((a, b) =>
@@ -72,14 +71,16 @@ const mediaNotas = media.reduce((a, b) =>
 console.log(media.length);
 console.log(mediaNotas);
   
- 
+//Personagens
+//Funções de ordenar personagem
 
-//Função de ordenar personagem A-Z
 export const orders = {
   
+  //A-Z
+
   charactersOrderAZ: function() {
-    let characterAZ = getCharacters()
-    characterAZ = characterAZ.sort((A,Z) => {
+    const character = getCharacters()
+    character.sort((A,Z) => {
       if (A.name > Z.name) {
         return 1;
       }
@@ -91,12 +92,14 @@ export const orders = {
       }
       
     });
-    return characterAZ;                      
+    return character;                      
   },
+
+  //Z-A
 
   charactersOrderZA: function() {
-    let characterZA = getCharacters()
-    characterZA = characterZA.sort((A,Z) => {
+    const character = getCharacters()
+    character.sort((A,Z) => {
       if (A.name > Z.name) {
         return -1;
       }
@@ -108,29 +111,14 @@ export const orders = {
       }
       
     });
-    return characterZA;
+    return character;
   },
-
- charactersAgeOldertoYounger: function() {
-    let dataAgeOldertoYounger = getCharacters()
-    dataAgeOldertoYounger.sort((a,b) => {
-      if (a.age > b.age) { 
-        return -1;
-      }
-      else if (a.age < b.age) {
-        return 1;
-      }
-      else { 
-        return 0;
-      }
-
-    });
-    return dataAgeOldertoYounger;
-  },
+  
+  //Mais novo para o mais velho
 
   charactersAgeYoungerToOlder: function() {
-    let dataAgeYoungerToOlder = getCharacters()
-    dataAgeYoungerToOlder.sort((a,b) => {
+    const character = getCharacters()
+    character.sort((a,b) => {
       if (a.age > b.age) { 
         return 1;
       }
@@ -142,26 +130,61 @@ export const orders = {
       }
 
     });
-    return dataAgeYoungerToOlder;
+    return character;
+  },
+  
+  //Mais velho para o mais novo
+
+  charactersAgeOldertoYounger: function() {
+    const character = getCharacters()
+    character.sort((a,b) => {
+      if (a.age > b.age) { 
+        return -1;
+      }
+      else if (a.age < b.age) {
+        return 1;
+      }
+      else { 
+        return 0;
+      }
+
+    });
+    return character;
   }
 
 }
 
-export function genderFilterFemale () {
-  getCharacters().filter(people => people.gender === "Female")
-} 
+//Funções de filtar
 
-export function genderFilterMale (){
-  getCharacters().filter(people => people.gender === "Male")
-} 
+export const filters ={
+  
+  //Mulher
+  
+  genderFilterFemale: function() {
+    const character = getCharacters()
+    return character.filter((people) => people.gender === "Female")
+  }, 
 
-/*export const female = function female (gender) {
-    let dataGender = getCharacters()
-    dataGender.filter(female())
-    console.log(dataGender)
-    return gender === "Female"
-  }*/
+  //Homem
 
-//export const male = function male (gender) {
-//    return gender === "Male"
-//  }
+  genderFilterMale: function(){
+    const character = getCharacters()
+    return character.filter(people => people.gender === "Male")
+  },
+  
+  //Outros
+
+  genderFilterOther: function() {
+    const character = getCharacters()
+    return character.filter((people => people.gender !=="Female" && people.gender !== "Male"))
+  }
+
+}
+
+//Calculo
+export function percentageGender(gender){
+  const character = getCharacters().length
+  const percentage = []
+  console.log(percentage)
+  return percentage = (100*gender.length)/character
+}
