@@ -1,6 +1,5 @@
 import data from './data/ghibli/ghibli.js'; 
 
-
 function mostrarCards(data) { 
     document.getElementById('cards-filmes').innerHTML = data.map((item) => ` 
         <div class="filmes">
@@ -13,8 +12,6 @@ function mostrarCards(data) {
     ).join("")
 } 
 mostrarCards(data.films); 
-
-
 
 /*function mostrarInformacoesCards(data) {
     document.getElementById('cardsInformacoes').innerHTML = data.map((item) => `
@@ -30,7 +27,4 @@ mostrarCards(data.films);
 }
 
 mostrarInformacoesCards(data.films);*/
-
-
-
  
