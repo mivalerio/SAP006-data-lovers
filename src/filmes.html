@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <meta charset="utf-8">
-  <title>Data Lovers</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@100&display=swap" rel="stylesheet">
-</head>
+  <head>
+    <meta charset="utf-8">
+    <title>Data Lovers</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@100&display=swap" rel="stylesheet">
+  </head>
 
 <body>
+  
   <header class="headerStudio">
     <div class="headerTxt">
       <a href="index.html" class="pagina-inicial">
@@ -21,17 +22,18 @@
         STUDIO GHIBLI
       </h1>
     </div>
-    </header>
+  </header>
+
     <main>
-
-
-      <ul class="menu">
-        <li><a href="sobre.html" id="sobre" class="itens-menu">Sobre</a></li>
-        <li><a href="projeto.html" id="projeto" class="itens-menu">Projeto</a></li>
-        <li><a href="filmes.html" id="filmes" class="itens-menu">Filmes</a></li>
-        <li><a href="personagens.html" id="personagens" class="itens-menu">Personagens</a></li>
-        <li><a href="duvidas.html" id="duvidas" class="itens-menu">Dúvidas</a></li>
-      </ul>
+      <nav>
+        <ul class="menu">
+          <li><a href="sobre.html" id="sobre" class="itens-menu">About</a></li>
+          <li><a href="projeto.html" id="projeto" class="itens-menu">Project</a></li>
+          <li><a href="filmes.html" id="filmes" class="itens-menu">Films</a></li>
+          <li><a href="personagens.html" id="personagens" class="itens-menu">Characters</a></li>
+          <li><a href="duvidas.html" id="duvidas" class="itens-menu">Contact</a></li>
+        </ul>
+      </nav>
       <br>
       
       <ul class="menu">
@@ -61,13 +63,12 @@
           <div id="cards-informacoes" class="cards-informacoes"></div>
         </div>
       </div>
-
+   
       <div id="cards-filmes" class="cards"></div>
-
-      
     </main>
-    <div id="root"></div>
-    <script src="./filmes.js" type="module"></script>
-</body>
+    
+      <div id="root"></div>
+      <script src="./filmes.js" type="module"></script>
+  </body>
 
 </html>

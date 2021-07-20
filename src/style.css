@@ -20,7 +20,7 @@ body{
  
 .titulo{
     text-align: center;
-    padding-left: 25%;
+    padding-left: 24%;
 }
  
 .logoImagem{
@@ -35,12 +35,42 @@ body{
     display: flex;
 }
 
+.title-about{
+    color:rgb(32, 139, 177);
+    margin-left: 5%;
+}
+
+.line{
+    width: 95%;
+    margin-left: 2%;
+}
+
+.text{
+  margin: 1%;
+}
+.text-about {
+    width: 90%;
+    align-content: center;
+    font-size: 14pt;
+    margin-top:2% ;
+    margin-bottom: 2%;
+    margin-left: 5%;
+
+}
+
+.list-about{
+    margin-left: 8%;
+    margin-bottom: 4%;
+    font-size: 14pt;
+}
+
 .cards img{
     max-width:250px;
     max-height:350px;
     width: 100%;
-    height: 400px;
-    object-fit:cover; 
+    height: 300px;
+    object-fit:cover;
+    margin-top: 10%;
 }
 
 .cards{
@@ -48,12 +78,24 @@ body{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 100px;
+    margin-top: 10%;
+    margin-left: 15%;
+    margin-right: 15%;
     text-align: center;
     color: black;  
     visibility: visible;
-    
-        
+    font-weight: bold;
+}
+
+.titulo-filmes :hover{
+    font-size: 92%;
+    padding-bottom: 10%;
+    transform: scale(1.1);
+}
+
+.character-name{
+    font-size: 92%;
+    padding-bottom: 10%;
 }
  
 #cards-filmes img:hover{
@@ -63,12 +105,11 @@ body{
     transition: all linear 0.3s; 
     cursor: pointer;
 }
-
-#card-personagens img:hover{
+#card-characters img:hover{
     max-width:200px;
     max-height:300px;
     width: 100%;
-    height: 200px;
+    height: 300px;
     object-fit:cover;
     filter: grayscale(100%);
     transform: scale(1.1);
@@ -82,6 +123,7 @@ body{
     padding: 20px 40px 20px 40px;
     margin: auto;
     background-color: rgb(32, 139, 177);
+    color: white; text-shadow: black 0.1em 0.1em 0.2em
 }
 
 .itens-menu{
@@ -97,7 +139,6 @@ body{
 }
 
 .select{
-  
    margin-right: 4%;
 }
 
@@ -136,6 +177,36 @@ body{
     top: 5px;
     right: 10px;
     cursor: pointer;
+}
+
+.contact-us {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.jessica-michele{
+    padding-top: 2%;
+    padding-right: 5%;
+    padding-bottom: 2%;
+    padding-left: 35%;
+}
+
+.contacts{
+    background-color:rgb(32, 139, 177);
+    width:50%;
+    border-radius: 10px;
+    padding-top: 2%;
+    padding-right: 5% ;
+    padding-bottom: 3%;
+    padding-left: 5%;
+    margin: 5%;
+    font-weight: bolder;
 }
 
 .footer-inf{

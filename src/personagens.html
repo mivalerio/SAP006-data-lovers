@@ -8,56 +8,70 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@100&display=swap" rel="stylesheet">
   </head>
+  
   <body>
-    <header class="headerStudio">
-        <div class="headerTxt">
-          <a href="index.html" class="pagina-inicial">
-              <img class="logoImagem" src="img/pngkey.com-studio-ghibli-png-1987322.png">
-          </a>
-          <h1 class="titulo">
-            <u> スタジオジブリ作品 <br></u>
-              STUDIO GHIBLI
-          </h1>
-        </div>
-    </head>
+    
+  <header class="headerStudio">
+    <div class="headerTxt">
+      <a href="index.html" class="pagina-inicial">
+          <img class="logoImagem" src="img/pngkey.com-studio-ghibli-png-1987322.png">
+      </a>
+      <h1 class="titulo">
+        <u> スタジオジブリ作品 <br></u>
+          STUDIO GHIBLI
+      </h1>
+      <h4></h4>
+    </div>
+  </header>
+    
     <main>
-      
-      <ul class="menu">
-        <li><a href="sobre.html" id="sobre" class="itens-menu">Sobre</a></li>
-        <li><a href="projeto.html" id="projeto" class="itens-menu">Projeto</a></li>
-        <li><a href="filmes.html" id="filmes" class="itens-menu">Filmes</a></li>
-        <li><a href="personagens.html" id="personagens" class="itens-menu">Personagens</a></li>
-        <li><a href="duvidas.html" id="duvidas" class="itens-menu">Dúvidas</a></li>
-      </ul>
+      <nav>
+        <ul class="menu">
+          <li><a href="sobre.html" id="sobre" class="itens-menu">About</a></li>
+          <li><a href="projeto.html" id="projeto" class="itens-menu">Project</a></li>
+          <li><a href="filmes.html" id="filmes" class="itens-menu">Films</a></li>
+          <li><a href="personagens.html" id="personagens" class="itens-menu">Characters</a></li>
+          <li><a href="duvidas.html" id="duvidas" class="itens-menu">Contact</a></li>
+        </ul>
+      </nav>
       <br>
       
       <ul class="menu" >
         <div class="select-options">
-          <p>Ordenar em ordem alfabética&ensp;</p>
+          <p>Sort alphabetically &ensp;</p>
           <select name="alphabet-select" class="select" id="order">
-            <option value=""selected disabled>Selecione</option>
-            <option value="az" id="az">De A - Z</option>
-            <option value="za" id="za">De Z - A</option>
+            <option value=""selected disabled>Select</option>
+            <option value="az" id="az"> A - Z</option>
+            <option value="za" id="za"> Z - A</option>
           </select>
-          <p>Ordenar por idade &ensp;</p>
+          <p>Sort by age &ensp;</p>
           <select name="age-select"  class="select" id="age">
-            <option value=""selected disabled>Selecione</option>
-            <option value="older-to-younger">Do mais velho para o mais novo</option>
-            <option value="younger-to older">Do mais novo para o mais velho</option>
+            <option value=""selected disabled>Select</option>
+            <option value="younger-to-older">Younger to older</option>
+            <option value="older-to-younger">Older to Younger</option>
           </select>
-          <p>Filtrar por gênero &ensp;</p>
+          <p>Filter by gender &ensp;</p>
           <select name="gender-select"  class="select" id="gender">
-            <option value=""selected disabled>Selecione</option>
-            <option value="women">Mulher</option>
-            <option value="man">Homem</option>
+            <option value=""selected disabled>Select</option>
+            <option value="women">Women</option>
+            <option value="man">Man</option>
+            <option value="other">Other</option>
           </select>
         </div>
       </ul>
 
+      <div id="calculo-pocentegem"></div>
+
       <div id="card-characters" class="cards"></div>
-      
     </main>
-    
+
+    <div id="char-wrapper" class="popup-wrapper">
+      <div id="char-content" class="popup">
+        <button id="char-close" class="popup-close">x</button>
+        <div id="char-info" class="popup-info"></div>
+      </div>
+    </div>
+
     <footer class="footer-inf">
       <p class="name-footer">BootCamp Laboratória Projeto Data Lovers</p>
       <div class="git-link">
