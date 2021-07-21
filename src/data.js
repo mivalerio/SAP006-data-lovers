@@ -1,7 +1,6 @@
 import data from './data/ghibli/ghibli.js';
-import { getCharacters } from './personagens.js';
+//import { getCharacters } from './personagens.js';
 
-//Função de filtrar filme
 
 export const ordenarDatadeLancamento = (films) => {
   const filmesOrdenados = films.sort(function (a, b) {
@@ -16,7 +15,7 @@ export const ordenarDatadeLancamento = (films) => {
   });
   return filmesOrdenados;
 }
-  
+
 export const ordenaMaiorScore = (films) => {
   const ordenaScoreMaior = films.sort(function (a, b) {
     if (a.rt_score < b.rt_score) {
@@ -30,7 +29,7 @@ export const ordenaMaiorScore = (films) => {
   });
   return ordenaScoreMaior;
 }
-  
+
 export const ordenaAZ = (films) => {
   const ordenaNome = films.sort(function (a, b) {
     if (a.title > b.title) {
@@ -44,19 +43,29 @@ export const ordenaAZ = (films) => {
   });
   return ordenaNome;
 }
-  
-// Filtrar por nome através do input text
 
+export const filtraDiretor = (films) => {
+  const ordenaDiretor = films.sort(function (a, b) {
+    if (a.director = b.director) {
+      return 1;
+    }
+  });
+  return ordenaDiretor;
+}
+
+// Filtrar por nome através do input text
 export const filtraNome = (data,films) => {
+  
   let procuraPorNome = data.filter((filtraNome =>
-  filtraNome.title.toLowerCase().includes(films.toLowerCase())
-  
-  ));
-  return procuraPorNome;
+    filtraNome.title.toLowerCase().includes(films.toLowerCase())
+    
+    ));
+    return procuraPorNome;
 };
-  
+
+
 //calcular media Score
-  
+
 const filmes = data.films;
 
 let media = [];
@@ -65,7 +74,7 @@ for (let i = 0; i < filmes.length; i++) {
 media.push(parseInt(filmes[i]["rt_score"]));
 }
   
-const mediaNotas = media.reduce((a, b) =>
+export const mediaNotas = media.reduce((a, b) =>
 (a + b)) / media.length;
 
 console.log(media.length);
