@@ -4,6 +4,7 @@ import { ordenaMaiorScore } from './data.js';
 import { ordenaAZ } from './data.js';
 import { filtraNome } from './data.js';
 import { filtraDiretor } from './data.js';
+import { mediaNotas } from './data.js';
 
 const filmes = data.films;
 const pesquisar = document.getElementById("busca");
@@ -11,7 +12,7 @@ const cardsFilmes = document.getElementById("cards-filmes");
 const cardsInformacoes = document.querySelector(".cards-informacoes");
 const popup = document.querySelector(".popup-wrapper");
 const btnFechar = document.querySelector(".popup-close");
-const media = document.querySelector("media");
+const media = document.getElementById("media");
 
 function mostrarCards(data) {
     cardsFilmes.innerHTML = "";
@@ -21,7 +22,7 @@ function mostrarCards(data) {
         <div class="filmes">
             <div class="img-poster">    
                 <img src="${item.poster}"> 
-                <H3>${item.title}</H3>
+                <div>${item.title}</div>
             </div>
                     
         </div>`,
@@ -86,7 +87,7 @@ selectElement.addEventListener('change', (event) => {
     if (opcaoSelecionada == "rt_score") {
         const ordenaScoreMaior = ordenaMaiorScore(filmes)
 
-
+        
         mostrarCards(ordenaScoreMaior);
     }
 
@@ -138,7 +139,11 @@ function procurarNome(e) {
 
 pesquisar.addEventListener("keyup", procurarNome);
 
+const rtScore = document.getElementById("rt_score");
 
+function mediaScore() {
+    
+}
 
-
+rtScore.addEventListener("click", mediaScore);
 
