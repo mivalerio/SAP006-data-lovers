@@ -1,5 +1,5 @@
 import data from './data/ghibli/ghibli.js';
-//import { getCharacters } from './personagens.js';
+import { getCharacters } from './personagens.js';
 
 
 export const ordenarDatadeLancamento = (films) => {
