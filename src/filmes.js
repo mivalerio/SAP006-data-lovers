@@ -1,17 +1,19 @@
-import data from './data/ghibli/ghibli.js'; 
+import data from "./data/ghibli/ghibli.js";
 
-function mostrarCards(data) { 
-    document.getElementById('cards-filmes').innerHTML = data.map((item) => ` 
+function mostrarCards(data) {
+  document.getElementById("cards-filmes").innerHTML = data
+    .map(
+      (item) => `
         <div class="filmes">
-            <div class="img-poster"> 
-                <img src="${item.poster}"> 
-                <div class="titulo-filmes">${item.title}</div>
-            </div> 
+          <div class="img-poster">
+            <img src="${item.poster}">
+            <div class="titulo-filmes">${item.title}</div>
+          </div>
         </div>`
- 
-    ).join("")
-} 
-mostrarCards(data.films); 
+    )
+    .join("");
+}
+mostrarCards(data.films);
 
 /*function mostrarInformacoesCards(data) {
     document.getElementById('cardsInformacoes').innerHTML = data.map((item) => `
@@ -27,4 +29,3 @@ mostrarCards(data.films);
 }
 
 mostrarInformacoesCards(data.films);*/
- 
