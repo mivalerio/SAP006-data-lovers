@@ -1,4 +1,3 @@
-
 export const ordenarDatadeLancamento = (films) => {
   const filmesOrdenados = films.sort(function (a, b) {
     if (a.release_date > b.release_date) {
@@ -62,75 +61,69 @@ export const mediaNotas = (arrayScores) => {
 
   return mediaFilmes;
 
-
 };
+
 
 //Personagens
 //Funções de ordenar personagem
 
-/*export const orders = {
+export const orders = {
+
   //A-Z
 
-  charactersOrderAZ: function () {
-    const character = getCharacters();
-    character.sort((A, Z) => {
+  charactersOrderAZ: function(arrayPeople) {
+    const character = arrayPeople.sort((A,Z) => {
+
       if (A.name > Z.name) {
         return 1;
       }
-      if (A.name < Z.name) {
+      else if (A.name < Z.name) {
         return -1;
-      } else {
-        return 0;
       }
+
     });
     return character;
   },
 
   //Z-A
 
-  charactersOrderZA: function () {
-    const character = getCharacters();
-    character.sort((A, Z) => {
+  charactersOrderZA: function(arrayPeople) {
+    const character = arrayPeople.sort((A,Z) => {
       if (A.name > Z.name) {
         return -1;
       }
-      if (A.name < Z.name) {
+      else if (A.name < Z.name) {
         return 1;
-      } else {
-        return 0;
       }
+
     });
     return character;
   },
 
   //Mais novo para o mais velho
 
-  charactersAgeYoungerToOlder: function () {
-    const character = getCharacters();
-    character.sort((a, b) => {
+  charactersAgeYoungerToOlder: function(arrayPeople) {
+    const character = arrayPeople.sort((a,b) => {
       if (a.age > b.age) {
         return 1;
       } else if (a.age < b.age) {
         return -1;
-      } else {
-        return 0;
       }
+
     });
     return character;
   },
 
   //Mais velho para o mais novo
 
-  charactersAgeOldertoYounger: function () {
-    const character = getCharacters();
-    character.sort((a, b) => {
+  charactersAgeOldertoYounger: function(arrayPeople) {
+    const character = arrayPeople.sort((a,b) => {
       if (a.age > b.age) {
         return -1;
       } else if (a.age < b.age) {
         return 1;
-      } else {
-        return 0;
       }
+
     });
     return character;
   },
@@ -138,36 +131,25 @@ export const mediaNotas = (arrayScores) => {
 
 //Funções de filtar
 
-export const filters = {
+export const filters ={
+
   //Mulher
 
-  genderFilterFemale: function () {
-    const character = getCharacters();
-    return character.filter((people) => people.gender === "Female");
+  genderFilterFemale: function(arrayPeople) {
+
+    return arrayPeople.filter((people) => people.gender === "Female")
   },
 
   //Homem
 
-  genderFilterMale: function () {
-    const character = getCharacters();
-    return character.filter((people) => people.gender === "Male");
+  genderFilterMale: function(arrayPeople){
+
+    return arrayPeople.filter((people) => people.gender === "Male")
   },
 
   //Outros
 
-  genderFilterOther: function () {
-    const character = getCharacters();
-    return character.filter(
-      (people) => people.gender !== "Female" && people.gender !== "Male"
-    );
-  },
-};
+  genderFilterOther: function(arrayPeople) {
 
-//Calculo
-export function percentageGender(gender) {
-  const character = getCharacters().length;
-  const percentage = [];
-
-  return (percentage = (100 * gender.length) / character);
-}
-*/
+    return arrayPeople.filter((people) => people.gender !=="Female" && people.gender !== "Male")
+  }

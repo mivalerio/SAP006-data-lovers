@@ -1,10 +1,13 @@
 import data from "./data/ghibli/ghibli.js";
+
 import { ordenarDatadeLancamento } from "./data.js";
 import { ordenaMaiorScore } from "./data.js";
 import { ordenaAZ } from "./data.js";
 import { filtraNome } from "./data.js";
 import { filtraDiretor } from "./data.js";
 import { mediaNotas } from "./data.js";
+
+
 
 const filmes = data.films;
 const pesquisar = document.getElementById("buscar");
@@ -45,6 +48,7 @@ function mostrarCards(data) {
         });
     })
     .join("");
+
 }
 mostrarCards(data.films);
 

@@ -1,4 +1,4 @@
-/*import { orders, filters} from './data.js';
+import { orders, filters} from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 //Entrar na array de persongem
@@ -31,6 +31,7 @@ function showCardsCharacters (characters){
       </div>
     <div>`
 
+    //Pop up
     pessoas.appendChild(cardsCharacters)
     const popUpWrapper = document.getElementById("char-wrapper")
     const popUpInfo = document.getElementById("char-info")
@@ -38,20 +39,22 @@ function showCardsCharacters (characters){
     cardsCharacters.addEventListener("click", () =>{
       popUpWrapper.style.display = 'block'
 
+      //Pop up informação
       popUpInfo.innerHTML =
       `<div class="characters-pop-up">
-        <h2 class="character-name">${people.name}</h2>
+        <h2 class="character-title">${people.name}</h2>
           <div class="characters-info">
             <ul class="character-content">
-              Gender:<li class="character-gender">${people.gender}</li>
-              Age:<li class="character-age">${people.age}</li>
-              Eye color:<li class="character-eye">${people.eye_color}</li>
-              Hair color:<li class="character-hair">${people.hair_color}</li>
-              Specie:<li class="character-specie">${people.specie}</li>
+              <li class="character-gender"> Gender:${people.gender}</li>
+              <li class="character-age">Age:${people.age}</li>
+              <li class="character-eye">Eye color:${people.eye_color}</li>
+              <li class="character-hair">Hair color:${people.hair_color}</li>
+              <li class="character-specie">Specie:${people.specie}</li>
             </ul>
           </div>
       </div>`
 
+      //Pop-up fechar
       popUpWrapper.addEventListener("click", event => {
         const option = event.target.classList[0]
         const names = ['popup-close', 'popup-wrapper']
@@ -71,13 +74,6 @@ function showCardsCharacters (characters){
 
 showCardsCharacters(getCharacters())
 
-//Pop up
-
-//Pop up informação
-
-//Pop mostrar pop up
-
-
 //ordens/filtros
 
 //AZ
@@ -85,12 +81,14 @@ const order = document.getElementById("order");
 
 function alphabetOrder(event){
   const option = event.target.value;
-
+  //Limpar
+  charactersAge.value = "";
+  characterGender.value = "";
   if (option == "az"){
-    showCardsCharacters(orders.charactersOrderAZ());
+    showCardsCharacters(orders.charactersOrderAZ(getCharacters()));
   }
   else {
-    showCardsCharacters(orders.charactersOrderZA());
+    showCardsCharacters(orders.charactersOrderZA(getCharacters()));
   }
 }
 order.addEventListener("change",alphabetOrder);
@@ -101,12 +99,14 @@ const charactersAge = document.getElementById("age");
 
 function ageOrder(event){
   const option = event.target.value;
-
+  //Limpar
+  order.value = "";
+  characterGender.value = "";
   if (option == "younger-to-older"){
-    showCardsCharacters(orders.charactersAgeYoungerToOlder());
+    showCardsCharacters(orders.charactersAgeYoungerToOlder(getCharacters()));
   }
   else {
-    showCardsCharacters(orders.charactersAgeOldertoYounger());
+    showCardsCharacters(orders.charactersAgeOldertoYounger(getCharacters()));
   }
 
 }
@@ -118,45 +118,17 @@ const characterGender = document.getElementById("gender")
 //const calculo = document.getElementById("calculo-porcentagem")
 function genderFilter(event){
   const option = event.target.value;
-
+  //Limpar
+  order.value = "";
+  charactersAge.value = "";
   if (option == "women"){
-    showCardsCharacters(filters.genderFilterFemale());
+    showCardsCharacters(filters.genderFilterFemale(getCharacters()));
   }
   else if (option == "man"){
-    showCardsCharacters(filters.genderFilterMale());
+    showCardsCharacters(filters.genderFilterMale(getCharacters()));
   }
   else{
-    showCardsCharacters(filters.genderFilterOther())
+    showCardsCharacters(filters.genderFilterOther(getCharacters()))
   }
 }
 characterGender.addEventListener("change", genderFilter)
-
-
-//Limpar
-
-// function clear(){
-//   order.value = "";
-//   charactersAge.value = "";
-//   characterGender.value = "";
-// }
-// order.addEventListener("change", clear())
-// charactersAge.addEventListener("click", clear())
-// characterGender.addEventListener("click", clear())
-
-
-//mudar de cor
- const character = getCharacters()
-function colorChange (){
-
-    pessoas.style = "grayscale(100%)"
-    pessoas.style.transform = "scale(1.1)"
-    pessoas.style.transition = "all line 0.3s"
-}
-character.addEventListener('onmouseenter', colorChange())
-
-
-pessoas.addEventListener('onmouseenter', e => {
-    pessoas.style.filter = "grayscale(100%)";
-    pessoas.style.transform = "scale(1.1)";
-    pessoas.style.transition = "all line 0.3s";
-})*/
