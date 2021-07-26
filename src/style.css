@@ -82,6 +82,7 @@ a:link {
 /*Pagina About*/
 .text {
   margin: 1%;
+
 }
 
 .title-about {
@@ -93,7 +94,7 @@ a:link {
   width: 95%;
   margin-left: 2%;
 }
-
+  
 .text-about {
   width: 90%;
   align-content: center;
@@ -242,4 +243,4 @@ a:link {
   font-size: 20pt;
   padding: 5%;
 }
-
+ 

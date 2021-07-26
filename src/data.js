@@ -2,6 +2,7 @@ import data from './data/ghibli/ghibli.js';
 
 // Função de filtrar filme
 
+
 export const ordenarDatadeLancamento = (films) => {
   const filmesOrdenados = films.sort(function (a, b) {
     if (a.release_date > b.release_date) {
@@ -44,27 +45,39 @@ export const ordenaAZ = (films) => {
   return ordenaNome;
 }
 
+export const filtraDiretor = (films) => {
+  const ordenaDiretor = films.sort(function (a, b) {
+    if (a.director = b.director) {
+      return 1;
+    }
+  });
+  return ordenaDiretor;
+}
+
 // Filtrar por nome através do input text
-
 export const filtraNome = (data,films) => {
+  
   let procuraPorNome = data.filter((filtraNome =>
-  filtraNome.title.toLowerCase().includes(films.toLowerCase())
-
-  ));
-  return procuraPorNome;
+    filtraNome.title.toLowerCase().includes(films.toLowerCase())
+    
+    ));
+    return procuraPorNome;
 };
 
-// calcular media Score
 
-//const filmes = data.films;
+//calcular media Score
+
+const filmes = data.films;
+
 
 let media = [];
 
 for (let i = 0; i < filmes.length; i++) {
 media.push(parseInt(filmes[i]["rt_score"]));
 }
+  
+export const mediaNotas = media.reduce((a, b) =>
 
-const mediaNotas = media.reduce((a, b) =>
 (a + b)) / media.length;
 
 console.log(media.length);
