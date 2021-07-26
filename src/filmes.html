@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta charset="utf-8">
     <title>Studio Ghibli</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Livvic:wght@100&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -15,10 +17,14 @@
     <header class="headerStudio">
       <div class="headerTxt">
         <a href="index.html" class="pagina-inicial">
-          <img class="logoImagem" src="img/pngkey.com-studio-ghibli-png-1987322.png">
+          <img
+            class="logoImagem"
+            src="img/pngkey.com-studio-ghibli-png-1987322.png"
+          />
         </a>
         <h1 class="titulo">
-          <u> スタジオジブリ作品 <br></u>
+          <u> スタジオジブリ作品 <br /></u>
+
           STUDIO GHIBLI
         </h1>
       </div>
@@ -28,12 +34,74 @@
       <nav>
         <ul class="menu">
           <li><a href="sobre.html" id="sobre" class="itens-menu">About</a></li>
-          <li><a href="projeto.html" id="projeto" class="itens-menu">Project</a></li>
-          <li><a href="filmes.html" id="filmes" class="itens-menu">Films</a></li>
-          <li><a href="personagens.html" id="personagens" class="itens-menu">Characters</a></li>
-          <li><a href="duvidas.html" id="duvidas" class="itens-menu">Contact</a></li>
+          <li>
+            <a href="projeto.html" id="projeto" class="itens-menu">Project</a>
+          </li>
+          <li>
+            <a href="filmes.html" id="filmes" class="itens-menu">Films</a>
+          </li>
+          <li>
+            <a href="personagens.html" id="personagens" class="itens-menu"
+              >Characters</a
+            >
+          </li>
+          <li>
+            <a href="duvidas.html" id="duvidas" class="itens-menu">Contact</a>
+          </li>
         </ul>
       </nav>
+      <br />
+
+      <ul class="menu">
+        <div class="select-options">
+          <form action=" " method="post">
+            <input
+              type="search"
+              id="buscar"
+              name="buscar"
+              placeholder="Pesquisar"
+            />
+          </form>
+
+          <select id="opcao" name="opcao" class="opcao">
+            <option value="todos" selected="busca" id="busca">
+              Selecione a opção
+            </option>
+            <option value="release_date">Ano de Lançamento</option>
+            <option id="rt_score" value="rt_score">
+              Avaliação Critica Maior Score
+            </option>
+            <option value="title">De A a Z</option>
+          </select>
+
+          <select id="diretor" name="diretor" class="diretor">
+            <option value="todos" selected="buscaDiretor" id="buscaDiretor">
+              Filtrar por Diretor
+            </option>
+            <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+            <option value="Isao Takahata">Isao Takahata</option>
+            <option value="Yoshifumi Kondō">Yoshifumi Kondō</option>
+            <option value="Hiroyuki Morita">Hiroyuki Morita</option>
+            <option value="Gorō Miyazaki">Gorō Miyazaki</option>
+            <option value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
+          </select>
+        </div>
+      </ul>
+
+      <div class="box"><p>Segundo o site americano agregador de criticas Rotten Tomatoes,
+        um filme pode ser considerado bom, se a nota da critica for pelo menos 60. A media das animaçoes do
+        Estudio Ghibli é:&ensp;</p>
+
+       <div class="media" id="media"></div>
+      </div>
+
+      <div class="popup-wrapper">
+        <div class="popup">
+          <div class="popup-close">X</div>
+          <div id="cards-informacoes" class="cards-informacoes"></div>
+        </div>
+      </div>
+
       <div id="cards-filmes" class="cards"></div>
     </main>
 

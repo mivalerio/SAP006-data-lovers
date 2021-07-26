@@ -1,7 +1,3 @@
-import data from './data/ghibli/ghibli.js';
-
-// Função de filtrar filme
-
 export const ordenarDatadeLancamento = (films) => {
   const filmesOrdenados = films.sort(function (a, b) {
     if (a.release_date > b.release_date) {
@@ -14,7 +10,7 @@ export const ordenarDatadeLancamento = (films) => {
     return 0;
   });
   return filmesOrdenados;
-}
+};
 
 export const ordenaMaiorScore = (films) => {
   const ordenaScoreMaior = films.sort(function (a, b) {
@@ -28,7 +24,7 @@ export const ordenaMaiorScore = (films) => {
     return 0;
   });
   return ordenaScoreMaior;
-}
+};
 
 export const ordenaAZ = (films) => {
   const ordenaNome = films.sort(function (a, b) {
@@ -42,33 +38,31 @@ export const ordenaAZ = (films) => {
     return 0;
   });
   return ordenaNome;
-}
+};
+
+export const filtraDiretor = (films, director) => {
+  const ordenaDiretor = films.filter((films) => films.director === director);
+
+  return ordenaDiretor;
+};
 
 // Filtrar por nome através do input text
-
-export const filtraNome = (data,films) => {
-  let procuraPorNome = data.filter((filtraNome =>
-  filtraNome.title.toLowerCase().includes(films.toLowerCase())
-
-  ));
+export const filtraNome = (data, films) => {
+  let procuraPorNome = data.filter((filtraNome) =>
+    filtraNome.title.toLowerCase().includes(films.toLowerCase())
+  );
   return procuraPorNome;
 };
 
-// calcular media Score
+//calcular media Score
 
-//const filmes = data.films;
+export const mediaNotas = (arrayScores) => {
+  const mediaFilmes = arrayScores.reduce((a, b) => a + b) / arrayScores.length;
 
-let media = [];
+  return mediaFilmes;
 
-for (let i = 0; i < filmes.length; i++) {
-media.push(parseInt(filmes[i]["rt_score"]));
-}
+};
 
-const mediaNotas = media.reduce((a, b) =>
-(a + b)) / media.length;
-
-console.log(media.length);
-console.log(mediaNotas);
 
 //Personagens
 //Funções de ordenar personagem
@@ -79,6 +73,7 @@ export const orders = {
 
   charactersOrderAZ: function(arrayPeople) {
     const character = arrayPeople.sort((A,Z) => {
+
       if (A.name > Z.name) {
         return 1;
       }
@@ -111,8 +106,7 @@ export const orders = {
     const character = arrayPeople.sort((a,b) => {
       if (a.age > b.age) {
         return 1;
-      }
-      else if (a.age < b.age) {
+      } else if (a.age < b.age) {
         return -1;
       }
 
@@ -126,16 +120,14 @@ export const orders = {
     const character = arrayPeople.sort((a,b) => {
       if (a.age > b.age) {
         return -1;
-      }
-      else if (a.age < b.age) {
+      } else if (a.age < b.age) {
         return 1;
       }
 
     });
     return character;
-  }
-
-}
+  },
+};
 
 //Funções de filtar
 
@@ -161,5 +153,4 @@ export const filters ={
 
     return arrayPeople.filter((people) => people.gender !=="Female" && people.gender !== "Male")
   }
-
 }
