@@ -1,5 +1,5 @@
-import { orders, filters} from './data.js';
-import data from './data/ghibli/ghibli.js'; 
+/*import { orders, filters} from './data.js';
+import data from './data/ghibli/ghibli.js';
 
 //Entrar na array de persongem
 
@@ -20,22 +20,21 @@ export function getCharacters(){
 
 function showCardsCharacters (characters){
   pessoas.innerHTML = "";
-  const information = characters.map((people) => {
+  characters.map((people) => {
     const cardsCharacters = document.createElement("div")
-    
+
     cardsCharacters.innerHTML =
     `<div class="filmes">
-      <div class="img-personagem"> 
-        <img src="${people.img}"> 
+      <div class="img-personagem">
+        <img src="${people.img}">
         <div class="character-name">${people.name}</div>
-      </div> 
+      </div>
     <div>`
 
     pessoas.appendChild(cardsCharacters)
     const popUpWrapper = document.getElementById("char-wrapper")
     const popUpInfo = document.getElementById("char-info")
-    const popupClose = document.getElementById("char-close")
-    
+
     cardsCharacters.addEventListener("click", () =>{
       popUpWrapper.style.display = 'block'
 
@@ -58,14 +57,14 @@ function showCardsCharacters (characters){
         const names = ['popup-close', 'popup-wrapper']
         const closePopUp = names.some(
           names => names === option)
-  
+
         if (closePopUp){
           popUpWrapper.style.display = "none"
         }
       })
 
     });
-    
+
   }).join("");
 
 }
@@ -86,7 +85,7 @@ const order = document.getElementById("order");
 
 function alphabetOrder(event){
   const option = event.target.value;
-  
+
   if (option == "az"){
     showCardsCharacters(orders.charactersOrderAZ());
   }
@@ -102,7 +101,7 @@ const charactersAge = document.getElementById("age");
 
 function ageOrder(event){
   const option = event.target.value;
-  
+
   if (option == "younger-to-older"){
     showCardsCharacters(orders.charactersAgeYoungerToOlder());
   }
@@ -119,7 +118,7 @@ const characterGender = document.getElementById("gender")
 //const calculo = document.getElementById("calculo-porcentagem")
 function genderFilter(event){
   const option = event.target.value;
-  
+
   if (option == "women"){
     showCardsCharacters(filters.genderFilterFemale());
   }
@@ -144,11 +143,11 @@ characterGender.addEventListener("change", genderFilter)
 // charactersAge.addEventListener("click", clear())
 // characterGender.addEventListener("click", clear())
 
-/*
+
 //mudar de cor
  const character = getCharacters()
 function colorChange (){
-   
+
     pessoas.style = "grayscale(100%)"
     pessoas.style.transform = "scale(1.1)"
     pessoas.style.transition = "all line 0.3s"
