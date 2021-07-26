@@ -131,22 +131,3 @@ function genderFilter(event){
   }
 }
 characterGender.addEventListener("change", genderFilter)
-
-/*
-//mudar de cor
- const character = getCharacters()
-function colorChange (){
-
-    pessoas.style = "grayscale(100%)"
-    pessoas.style.transform = "scale(1.1)"
-    pessoas.style.transition = "all line 0.3s"
-}
-character.addEventListener('onmouseenter', colorChange())
-
-
-pessoas.addEventListener('onmouseenter', e => {
-    pessoas.style.filter = "grayscale(100%)";
-    pessoas.style.transform = "scale(1.1)";
-    pessoas.style.transition = "all line 0.3s";
-})*/
-
