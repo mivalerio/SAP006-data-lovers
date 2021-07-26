@@ -35,6 +35,7 @@ function showCardsCharacters (characters){
     pessoas.appendChild(cardsCharacters)
     const popUpWrapper = document.getElementById("char-wrapper")
     const popUpInfo = document.getElementById("char-info")
+
     cardsCharacters.addEventListener("click", () =>{
       popUpWrapper.style.display = 'block'
 
