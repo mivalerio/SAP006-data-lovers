@@ -153,3 +153,4 @@ export const filters ={
 
     return arrayPeople.filter((people) => people.gender !=="Female" && people.gender !== "Male")
   }
+}
