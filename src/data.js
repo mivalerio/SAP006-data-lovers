@@ -163,11 +163,3 @@ export const filters ={
   }
 
 }
-
-//Calculo
-// export function percentageGender(gender){
-//   const character = getCharacters().length
-//   const percentage = []
-//   console.log(percentage)
-//   return percentage = (100*gender.length)/character
-// }
