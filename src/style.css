@@ -80,6 +80,9 @@ a:link {
 }
 
 /*Pagina About*/
+.text {
+  margin: 1%;
+}
 
 .title-about {
   color: rgb(32, 139, 177);
@@ -89,10 +92,6 @@ a:link {
 .line {
   width: 95%;
   margin-left: 2%;
-}
-
-.text {
-  margin: 1%;
 }
 
 .text-about {
