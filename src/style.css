@@ -243,19 +243,3 @@ a:link {
   padding: 5%;
 }
 
-/*Responsividades*/
-
-/*Mobile*/
-
-@media screen and (max-width: 480px) {
-
-  .titulo {
-    display: none;
-
-  }
-
-  .logoImagem{
-    display: none;
-  }
-}
-
