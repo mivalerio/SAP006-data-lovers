@@ -1,74 +1,74 @@
-//import data from './data/ghibli/ghibli.js';
+import data from './data/ghibli/ghibli.js';
 
-//Função de filtrar filme
+// Função de filtrar filme
 
-// export const ordenarDatadeLancamento = (films) => {
-//   const filmesOrdenados = films.sort(function (a, b) {
-//     if (a.release_date > b.release_date) {
-//       return 1;
-//     }
-//     if (a.release_date < b.release_date) {
-//       return -1;
-//     }
-//     // a must be equal to b
-//     return 0;
-//   });
-//   return filmesOrdenados;
-// }
+export const ordenarDatadeLancamento = (films) => {
+  const filmesOrdenados = films.sort(function (a, b) {
+    if (a.release_date > b.release_date) {
+      return 1;
+    }
+    if (a.release_date < b.release_date) {
+      return -1;
+    }
+    // a must be equal to b
+    return 0;
+  });
+  return filmesOrdenados;
+}
 
-// export const ordenaMaiorScore = (films) => {
-//   const ordenaScoreMaior = films.sort(function (a, b) {
-//     if (a.rt_score < b.rt_score) {
-//       return 1;
-//     }
-//     if (a.rt_score > b.rt_score) {
-//       return -1;
-//     }
-//     // a must be equal to b
-//     return 0;
-//   });
-//   return ordenaScoreMaior;
-// }
+export const ordenaMaiorScore = (films) => {
+  const ordenaScoreMaior = films.sort(function (a, b) {
+    if (a.rt_score < b.rt_score) {
+      return 1;
+    }
+    if (a.rt_score > b.rt_score) {
+      return -1;
+    }
+    // a must be equal to b
+    return 0;
+  });
+  return ordenaScoreMaior;
+}
 
-// export const ordenaAZ = (films) => {
-//   const ordenaNome = films.sort(function (a, b) {
-//     if (a.title > b.title) {
-//       return 1;
-//     }
-//     if (a.title < b.title) {
-//       return -1;
-//     }
-//     // a must be equal to b
-//     return 0;
-//   });
-//   return ordenaNome;
-// }
+export const ordenaAZ = (films) => {
+  const ordenaNome = films.sort(function (a, b) {
+    if (a.title > b.title) {
+      return 1;
+    }
+    if (a.title < b.title) {
+      return -1;
+    }
+    // a must be equal to b
+    return 0;
+  });
+  return ordenaNome;
+}
 
-// // Filtrar por nome através do input text
+// Filtrar por nome através do input text
 
-// export const filtraNome = (data,films) => {
-//   let procuraPorNome = data.filter((filtraNome =>
-//   filtraNome.title.toLowerCase().includes(films.toLowerCase())
+export const filtraNome = (data,films) => {
+  let procuraPorNome = data.filter((filtraNome =>
+  filtraNome.title.toLowerCase().includes(films.toLowerCase())
 
-//   ));
-//   return procuraPorNome;
-// };
+  ));
+  return procuraPorNome;
+};
 
-//calcular media Score
+// calcular media Score
 
-// //const filmes = data.films;
+//const filmes = data.films;
 
-// let media = [];
+let media = [];
 
-// for (let i = 0; i < filmes.length; i++) {
-// media.push(parseInt(filmes[i]["rt_score"]));
-// }
+for (let i = 0; i < filmes.length; i++) {
+media.push(parseInt(filmes[i]["rt_score"]));
+}
 
-// const mediaNotas = media.reduce((a, b) =>
-// (a + b)) / media.length;
+const mediaNotas = media.reduce((a, b) =>
+(a + b)) / media.length;
 
-// console.log(media.length);
-// console.log(mediaNotas);
+console.log(media.length);
+console.log(mediaNotas);
 
 //Personagens
 //Funções de ordenar personagem
@@ -130,7 +130,7 @@ export const orders = {
       else if (a.age < b.age) {
         return 1;
       }
-      
+
     });
     return character;
   }
